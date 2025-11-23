@@ -15,6 +15,11 @@ public class DemoService {
     }
 
 
+    public Demo saveDemo(Demo demo){
+
+        return demoRepository.save(demo);
+    }
+
     public Optional<Demo> getDemo(Long id){
 
         return demoRepository.findById(id);

@@ -1,9 +1,6 @@
 package com.br.javainicio.demo_spring;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/demo")
@@ -17,6 +14,10 @@ public class DemoController {
         this.demoService = demoService;
     }
 
+    @PostMapping
+    public Demo createDemo(@RequestBody Demo demo){
+        return demoService.saveDemo(demo);
+    }
 
     @GetMapping("/{id}")
     public Demo getDemo(@PathVariable("id") Long id){
