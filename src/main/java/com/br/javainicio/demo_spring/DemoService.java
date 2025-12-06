@@ -1,28 +1,15 @@
 package com.br.javainicio.demo_spring;
 
-import org.springframework.stereotype.Service;
+import com.br.javainicio.demo_spring.entity.DemoEntity;
 
+import java.util.List;
 import java.util.Optional;
 
-@Service
-public class DemoService {
+public interface DemoService {
 
-    DemoRepository demoRepository;
+    DemoEntity saveDemo(DemoEntity demo);
 
+    Optional<DemoEntity>getDemo(Long id);
 
-    public DemoService(DemoRepository demoRepository) {
-        this.demoRepository = demoRepository;
-    }
-
-
-    public Demo saveDemo(Demo demo){
-
-        return demoRepository.save(demo);
-    }
-
-    public Optional<Demo> getDemo(Long id){
-
-        return demoRepository.findById(id);
-
-    }
+    List<DemoEntity>listDemo();
 }

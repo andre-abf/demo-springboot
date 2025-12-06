@@ -1,10 +1,10 @@
-package com.br.javainicio.demo_spring;
+package com.br.javainicio.demo_spring.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class Demo {
+public class DemoEntity {
     @Id
     Long id;
     String description;
