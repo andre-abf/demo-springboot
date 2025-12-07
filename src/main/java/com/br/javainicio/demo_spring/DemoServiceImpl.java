@@ -1,7 +1,6 @@
 package com.br.javainicio.demo_spring;
 
 import com.br.javainicio.demo_spring.entity.DemoEntity;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
